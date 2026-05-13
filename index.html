@@ -1,3 +1,118 @@
+
+85rem; color: var(--text-muted); margin-top: 0.3rem; font-weight: 400; }
+
+/* ── SECTION COMMON ── */
+section { padding: 6rem 5%; }
+.section-tag {
+  font-size: 0.75rem; font-weight: 700; letter-spacing: 4px;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 0.8rem;
+}
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 3rem); font-weight: 900; line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-desc {
+  color: var(--text-muted); font-size: 1rem; line-height: 1.8;
+  max-width: 540px; font-weight: 300;
+}
+
+/* ── SERVICES ── */
+#services { background: var(--dark); }
+.services-header { text-align: center; margin-bottom: 4rem; }
+.services-header .section-desc { margin: 0 auto; }
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem; max-width: 1100px; margin: 0 auto;
+}
+.service-card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px; padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative; overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 80px; height: 80px;
+  background: radial-gradient(circle, rgba(184,150,12,0.12) 0%, transparent 70%);
+}
+.service-card:hover { border-color: rgba(184,150,12,0.4); transform: translateY(-4px); }
+.service-icon {
+  font-size: 2.2rem; margin-bottom: 1.2rem;
+  display: inline-block;
+}
+.service-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem; }
+.service-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+
+/* ── WHY US ── */
+#why {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem;
+  align-items: center; max-width: 1100px; margin: 0 auto;
+}
+.why-visual {
+  background: var(--card);
+  border: 1px solid rgba(184,150,12,0.2);
+  border-radius: 16px; padding: 3rem 2rem;
+  text-align: center; position: relative;
+}
+.mb-logo {
+  font-size: 7rem; line-height: 1;
+  background: linear-gradient(135deg, var(--silver) 0%, var(--gold-light) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem; font-weight: 900;
+}
+.why-visual p { color: var(--text-muted); font-size: 0.9rem; font-weight: 300; }
+.points { list-style: none; margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.2rem; }
+.points li {
+  display: flex; align-items: flex-start; gap: 1rem;
+  font-size: 0.95rem; line-height: 1.6;
+}
+.points li::before {
+  content: '✦'; color: var(--gold); font-size: 0.8rem;
+  flex-shrink: 0; margin-top: 0.2rem;
+}
+
+/* ── CONTACT ── */
+#contact { background: var(--dark); }
+.contact-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+.contact-inner .section-desc { margin: 0 auto 2.5rem; }
+.contact-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem; margin-bottom: 2.5rem;
+}
+.contact-card {
+  background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; padding: 1.5rem;
+  text-decoration: none; color: inherit;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+}
+.contact-card:hover { border-color: rgba(184,150,12,0.4); transform: translateY(-3px); }
+.contact-card .icon { font-size: 1.8rem; }
+.contact-card .label { font-size: 0.75rem; color: var(--text-muted); font-weight: 400; }
+.contact-card .value { font-size: 0.95rem; font-weight: 600; color: var(--silver-light); }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 2rem 5%;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+}
+footer p { font-size: 0.85rem; color: var(--text-muted); }
+footer span { color: var(--gold-light); font-weight: 700; }
+
+/* ── ANIMATIONS ── */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
 3rem;">أجهزة الفحص الرسمية</div>
       </div>
     </div>
